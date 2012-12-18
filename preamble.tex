@@ -1,0 +1,92 @@
+\documentclass[12pt,a4paper]{article}
+
+%%% src settings
+\usepackage[T2A]{fontenc}   % internal font encoding
+\usepackage[utf8]{inputenc} % text encoding
+\usepackage[russian]{babel} % document language specifics
+\usepackage{enumerate}
+\usepackage{pscyr}
+
+%%% text options
+\usepackage{indentfirst} % paragraph indentation
+\usepackage{graphicx}
+\usepackage{color}
+\linespread{1.5}
+
+%%% output geometry
+\usepackage{geometry}
+\geometry{left=2.5cm}
+\geometry{right=2cm}
+\geometry{top=2cm}
+\geometry{bottom=2cm}
+
+%%% math packages
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+%%% tables
+\usepackage{longtable}
+\usepackage{multirow}
+\renewcommand{\arraystretch}{1.5} % tabular cell height factor
+
+%%% headings and footers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{\thepage}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+\renewcommand{\headrulewidth}{0pt}
+
+%%% sections
+\usepackage{sectsty}
+\renewcommand{\rmdefault}{ftm} % Times New Roman нахуй
+\allsectionsfont{\normalfont\large} % типа не жирные заголовки
+\sectionfont{\centering\normalfont\large}
+\subsectionfont{\indent\normalfont}
+\subsubsectionfont{\large\indent\normalfont}
+
+%%% TOC
+\makeatletter
+     \renewcommand*\l@section{\@dottedtocline{1}{0em}{1.8em}}
+     \renewcommand*\l@subsection{\@dottedtocline{2}{1.5em}{2.0em}}
+     \renewcommand*\l@subsubsection{\@dottedtocline{3}{4.3em}{3.0em}}
+\makeatother
+
+%%% figures and tables captions
+\usepackage{caption}
+
+\captionsetup[table]{
+    labelsep=space,
+    justification=raggedright,
+    singlelinecheck=off,
+    name=Таблица,
+    labelsep=endash,
+    font=large
+}
+
+\captionsetup[figure]{
+    labelsep=space,
+    justification=centering,
+    singlelinecheck=off,
+    name=Рисунок,
+    labelsep=endash,
+    font=large
+}
+
+%%% tables, figures, equations numbering
+\numberwithin{table}{section}
+\numberwithin{figure}{section}
+\numberwithin{equation}{section}
+
+%%% footnotes numbering
+\renewcommand*{\thefootnote}{\arabic{footnote})}
+
+%%% reference list
+\addto\captionsrussian{\def\refname{\centerline{ПЕРЕЧЕНЬ ССЫЛОК}}}
+
+%%% clickable refs in pdf
+\usepackage[unicode,pdftex]{hyperref}
